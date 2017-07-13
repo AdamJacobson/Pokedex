@@ -1,4 +1,5 @@
 export const RECEIVE_ALL_POKEMON = "RECEIVE_ALL_POKEMON";
+export const RECEIVE_POKEMON = "RECEIVE_POKEMON";
 
 import * as APIUtil from '../util/api_util';
 
@@ -10,10 +11,20 @@ export const receiveAllPokemon = (pokemon) => {
   };
 };
 
+export const receivePokemon = (singlePokemon) => {
+  return {
+    type: RECEIVE_POKEMON,
+    singlePokemon
+  };
+};
+
 // Functional action creator
 export const requestAllPokemon = () => (dispatch) => {
   return APIUtil.fetchAllPokemon()
     .then(pokemon => dispatch(receiveAllPokemon(pokemon)));
 };
 
-// APIUtil.fetchAllPokemon().then((data) => dispatch(receiveAllPokemon(data)));
+export const requestPokemon = (id) => (dispatch) => {
+  return APIUtil.fetchPokemon(id)
+    .then(pokemon => dispatch(receivePokemon(pokemon)));
+};
