@@ -18,7 +18,7 @@ export const receivePokemon = (singlePokemon) => {
   };
 };
 
-// Functional action creator
+// Thunk/Functional action creator
 export const requestAllPokemon = () => (dispatch) => {
   return APIUtil.fetchAllPokemon()
     .then(pokemon => dispatch(receiveAllPokemon(pokemon)));

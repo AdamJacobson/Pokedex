@@ -4,7 +4,7 @@ import { requestAllPokemon, receiveAllPokemon, receivePokemon, requestPokemon }
   from "./actions/pokemon_actions";
 import * as APIUtil from './util/api_util';
 import configureStore from './store/store';
-import { selectAllPokemon } from './reducers/selectors';
+import { selectAllPokemon, selectPokemon } from './reducers/selectors';
 import Root from './components/root';
 import { HashRouter, Route } from 'react-router-dom';
 
@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const store = configureStore();
 
   window.selectAllPokemon = selectAllPokemon;
+  window.selectPokemon = selectPokemon;
+
   window.dispatch = store.dispatch;
   window.getState = store.getState;
 

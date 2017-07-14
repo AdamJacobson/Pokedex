@@ -7,6 +7,7 @@ import PokemonIndex from './pokemon_index';
 const mapStateToProps = state => ({
   pokemon: selectAllPokemon(state)
 });
+
 //mapDispatch to props is just a shortcut for dispatch whatever
 const mapDispatchToProps = dispatch => ({
   requestAllPokemon: () => dispatch(requestAllPokemon())
