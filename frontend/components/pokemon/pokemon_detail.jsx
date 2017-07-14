@@ -16,13 +16,16 @@ class PokemonDetail extends React.Component {
       return null;
     }
     return (
-      <ul>
-        <li>{this.props.pokemon.name}</li>
-        <li>Type: {this.props.pokemon.poke_type}</li>
-        <li>Attack: {this.props.pokemon.attack}</li>
-        <li>Defense: {this.props.pokemon.defense}</li>
-        <li>Moves: {this.props.pokemon.moves.join(', ')}</li>
-      </ul>
+      <div className="pokemon-detail">
+        <ul>
+          <img src={this.props.pokemon.image_url}/>
+          <li>{this.props.pokemon.name}</li>
+          <li>Type: {this.props.pokemon.poke_type}</li>
+          <li>Attack: {this.props.pokemon.attack}</li>
+          <li>Defense: {this.props.pokemon.defense}</li>
+          <li>Moves: {this.props.pokemon.moves.join(', ')}</li>
+        </ul>
+      </div>
     );
   }
 }

@@ -3,4 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 ul {
   list-style: none;
+  overflow-y: auto;
+  height: 550px;
+  border: 2px solid black;
+}
+
+.pokemon-index {
+  display: flex;
+}
+
+.pokemon-detail {
+  display: flex;
+  width: 80%;
+  justify-content: center;
 }

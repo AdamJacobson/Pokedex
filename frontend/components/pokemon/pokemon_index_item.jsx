@@ -6,7 +6,7 @@ const pokemonIndexItem = ({ poke: { id, name, image_url } }) => {
     <li>
       <Link to={`/pokemon/${id}`}>
         {name}
-        <img style={{width: '100px'}} src={image_url}/>
+        <img style={{width: '20px'}} src={image_url}/>
       </Link>
     </li>
   );
